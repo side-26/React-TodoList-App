@@ -1,0 +1,50 @@
+//Defaults
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --text-color: #fff;
+  --text-color-2: #191919;
+  --bg-color-1: #7376d5;
+  --bg-color-2: #ff6ebb;
+  --bg-color-3: #f2f2f2;
+  --bg-done-color: #29c036;
+  --bg-doing-color: #413a9a;
+  --bg-tasks-color: #4d97fa;
+  --them-all-cards: #eaebef;
+  --text-color-3: #413a9a;
+  --btn-bgColor: #066ff9;
+  --box-bgcolor: #e6e6e6;
+  --danger-color: #ff3333;
+  --scroll-bar-color: #737373;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar-color);
+  border-radius: 10px;
+}
+#root {
+  background: rgb(255, 110, 187);
+  background: -moz-linear-gradient(
+    207deg,
+    rgba(255, 110, 187, 1) 0%,
+    rgba(115, 118, 213, 1) 100%
+  );
+  background-attachment: scroll;
+  background: -webkit-linear-gradient(
+    207deg,
+    rgba(255, 110, 187, 1) 0%,
+    rgba(115, 118, 213, 1) 100%
+  );
+  background: linear-gradient(
+    207deg,
+    rgba(255, 110, 187, 1) 0%,
+    rgba(115, 118, 213, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff6ebb",endColorstr="#7376d5",GradientType=1);
+}
