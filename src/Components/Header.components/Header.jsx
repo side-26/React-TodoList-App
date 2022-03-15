@@ -5,7 +5,7 @@ import Form from "./modules/form";
 import IconBtn from "./modules/icon-btn";
 class Header extends Component {
   render() {
-    const{addPersonFu,stateValues}=this.props;
+    const{addPersonFu,stateValues,state}=this.props;
     return (
       <header className={`${style['main-header']}`}>
         <nav className={`${style['navbar']}`}>
@@ -26,7 +26,7 @@ class Header extends Component {
               add tasks , work on it , enjoy it.
             </p>
           </div>
-          <Form changing={this.props.changing} stateValues={stateValues} addPersonFu={addPersonFu} />
+          <Form state={state} changing={this.props.changing} stateValues={stateValues} addPersonFu={addPersonFu} />
         </section>
       </header>
     );

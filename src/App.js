@@ -89,6 +89,7 @@ class App extends Component {
           changing={this.changing}
           stateValues={this.state}
           addPersonFu={this.addActivity}
+          state={this.state}
         />
         <Main
           deleteAllItem={this.deleteAllItem}

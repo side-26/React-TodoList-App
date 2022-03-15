@@ -3,6 +3,7 @@ import Inputs from "./inputs";
 import style from '../Header.module.scss'
 class Form extends Component {
   // let {stateValues}=this.props;
+
   state = {
     inputs: [
       {
@@ -26,12 +27,15 @@ class Form extends Component {
     ],
   };
   render() {
+    const { state } = this.props;
     // console.log(this.props.stateValues);
+    const disabled=Object.values(state).every(item=>item!=="")
+    console.log();
     return (
-      <form className= {`${style["form"]}`}>
-        {this.state.inputs.map((input,index) => (
+      <form className={`${style["form"]}`}>
+        {this.state.inputs.map((input, index) => (
           <Inputs
-          key={index}
+            key={index}
             laName={input.lable}
             placeHolder={input.placeholder}
             type={input.type}
@@ -40,11 +44,12 @@ class Form extends Component {
           />
         ))}
         <button
-          className= {`${style["btn"]} ${style["btn-submit"]}`}
+          className={`${style["btn"]} ${style["btn-submit"]}`}
           onClick={(e) => {
             this.props.addPersonFu(e);
           }}
           type="submit"
+          disabled={!disabled}
         >
           add
         </button>
